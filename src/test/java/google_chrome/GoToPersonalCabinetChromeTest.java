@@ -11,9 +11,10 @@ import user.User;
 public class GoToPersonalCabinetChromeTest extends ChromeSetup {
 
     @Before
-    public void signIn() {
+    public void signIn() throws InterruptedException {
         startPage.clickElementOfStartPage(startPage.getPersonalCabinetInHeader());
         signInPage.signIn(User.getRealUser());
+        Thread.sleep(1000);
     }
 
     @Test

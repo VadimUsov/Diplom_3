@@ -2,6 +2,7 @@ package user;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
+// Класс для создания тестовых юзеров
 public class User {
     private String name;
     private String email;
@@ -13,6 +14,7 @@ public class User {
         this.password = password;
     }
 
+    // Метод для получения юзера со случайными данными
     public static User getRandomUser() {
         return new User(
                 RandomStringUtils.randomAlphabetic(10),
@@ -21,6 +23,7 @@ public class User {
         );
     }
 
+    // Метод для получения случайного юзера с коротким паролем
     public static User getRandomUserWithShortPassword() {
         return new User(
                 RandomStringUtils.randomAlphabetic(10),
@@ -29,6 +32,8 @@ public class User {
         );
     }
 
+
+    // Метод для получения реального, уже зарегистрированного, юзера
     public static User getRealUser() {
         return new User(
                 "realuser",

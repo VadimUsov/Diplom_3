@@ -16,6 +16,7 @@ public class ChromeSetup {
     protected RestorePasswordPage restorePassword;
     protected PersonalCabinetPage personalCabinetPage;
 
+    //Метод для открытия создания драйвера и открытия Google Chrome на странице "https://stellarburgers.nomoreparties.site/"
     @Before
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
@@ -30,6 +31,7 @@ public class ChromeSetup {
         personalCabinetPage = new PersonalCabinetPage(driver);
     }
 
+    // Метод закрывающий браузер после теста
     @After
     public void tearDown() {
         driver.quit();
